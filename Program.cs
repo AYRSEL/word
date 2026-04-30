@@ -22,21 +22,27 @@ internal class Word
     }
 
     // En caso de que alguien quiera volver a leer las instrucciones siempre podemos hacer una llamada a este método
-    public static string Instructions()
+    public static void Instructions()
     {
-        string instructions = """
+        System.Console.WriteLine("""
 
         ===== ¡¡HOLA!! ===== 
-        Bienvenido a este Wordle
-        Te explicaremos cómo funciona esto...
+        Bienvenido a mi Wordle
+        Te explicaré cómo funciona esto...
 
         Tienes que adivinar una palabra de 5 letras en 5 intentos.
-        VERDE = Letra correcta en posición correcta
-        AMARILLO = Letra correcta en posición equivocada
-        ROJO = Letra equivocada
-
-        """;
-        return instructions;
+        Cada letra saldrá remarcada con un color distintos conforme las uses.
+        """);
+        Console.ForegroundColor = ConsoleColor.Black;
+        Console.BackgroundColor = ConsoleColor.Green;
+        System.Console.WriteLine("LETRAS VERDES = Letra correcta en posición correcta");
+        Console.ResetColor();
+        Console.BackgroundColor = ConsoleColor.Yellow;
+        System.Console.WriteLine("LETRAS AMARILLAS = Letra correcta en posición equivocada");
+        Console.ResetColor();
+        Console.BackgroundColor = ConsoleColor.Red;
+        System.Console.WriteLine("LETRAS ROJAS = Letra equivocada");
+        Console.ResetColor();
     }
 
     // Comienzo del juego, si se pone otra cosa a S o N lanza excepción propia
@@ -133,7 +139,6 @@ internal class Word
             Console.ForegroundColor = ConsoleColor.Black;
 
             Console.Write($" {c} ");
-
             Console.ResetColor();
             System.Console.Write(" ");
         }
@@ -149,10 +154,9 @@ internal class Word
     // Clase principal que se encarga de llamar a todos los métodos para que funcione el juego
     private static void Main(string[] args)
     {
-        System.Console.WriteLine(Instructions());
+        Instructions();
         if (Start())
         {
-
             string secret = WordGen();
             // System.Console.WriteLine(secret);
             System.Console.WriteLine("\nYa tenemos tu palabra preparada, puedes comenzar a adivinar");
@@ -177,9 +181,8 @@ internal class Word
                 PrintKeyboard();
                 System.Console.WriteLine($"Intento nº {i} de 5");
             }
-
             if (!won)
-                System.Console.WriteLine($"\n\nHas perdido, la palabra era: {secret}\n\n");
+                System.Console.WriteLine($"\nHas perdido, la palabra era: {secret}\n");
         }
     }
 }
