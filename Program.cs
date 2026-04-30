@@ -170,10 +170,12 @@ internal class Word
                     won = true;
                     Console.ForegroundColor = ConsoleColor.Green;
                     System.Console.WriteLine("\n===== ✅ ¡¡HAS GANADO!! ✅ =====");
+                    System.Console.WriteLine($"\nHas tardado {i} intentos");
                     Console.ResetColor();
                     break;
                 }
                 PrintKeyboard();
+                System.Console.WriteLine($"Intento nº {i} de 5");
             }
 
             if (!won)
