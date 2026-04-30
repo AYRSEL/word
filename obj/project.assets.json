@@ -8,23 +8,26 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\monig\\.nuget\\packages\\": {}
+    "C:\\Users\\Equipo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\monig\\Desktop\\Proyectos\\Wordle\\word\\word.csproj",
+      "projectUniqueName": "C:\\Users\\Equipo\\Desktop\\juegos\\word\\word.csproj",
       "projectName": "word",
-      "projectPath": "C:\\Users\\monig\\Desktop\\Proyectos\\Wordle\\word\\word.csproj",
-      "packagesPath": "C:\\Users\\monig\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\monig\\Desktop\\Proyectos\\Wordle\\word\\obj\\",
+      "projectPath": "C:\\Users\\Equipo\\Desktop\\juegos\\word\\word.csproj",
+      "packagesPath": "C:\\Users\\Equipo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Equipo\\Desktop\\juegos\\word\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\monig\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Equipo\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
